@@ -1,11 +1,20 @@
 const mongoose = require("mongoose");
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost:27017/Library",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+// );
+
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/Library",
+  "mongodb+srv://ABHIJITH:abhijithjb4541@cluster0.giuem.mongodb.net/Library",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 );
+
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({

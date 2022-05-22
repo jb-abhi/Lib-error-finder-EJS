@@ -12,13 +12,22 @@ const mongoose = require("mongoose");
 // 2. I am a third-party module that is installed and has an important role. I will prevent your application from running. The entire part of myself is missing.
 //Installed EXPRESS module
 
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost:27017/Library",
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   }
+// );
+
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost:27017/Library",
+  "mongodb+srv://ABHIJITH:abhijithjb4541@cluster0.giuem.mongodb.net/Library",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 );
+
 const Schema = mongoose.Schema;
 
 const AuthorSchema = new Schema({
